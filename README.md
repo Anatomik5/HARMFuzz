@@ -1,2 +1,2 @@
-# HARMFuzz
-This is my Bachelor Thesis
+# HARMFuzz An efficient QEMU-Assisted Hybrid ARM Fuzzer
+HARMFuzz is AFL++ based ARM Fuzzer. 
