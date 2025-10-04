@@ -57,7 +57,8 @@ By systematically addressing these challenges, HARMFuzz advances the state of AR
 1. Generate test cases on the host machine using AFL++ with QEMU instrumentation.
 2. Run tests on target device with KVM enabled for hardware-assisted fuzzing.
 3. HARMFuzz will automatically manage input mutations, avoiding file-size changes and ensuring coverage growth.
-4. 
+4. [Test Cases and Working repo](https://github.com/Anatomik5/res)   This is working repo that was used during Thesis work, it is not structurized, but it contains my custom test cases and generated test cases, there is a lot of information, attention the data is unstructurized and doesnt have any README
+
 ---
 
 ## Results
