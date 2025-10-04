@@ -1,8 +1,10 @@
-# HARMFuzz: An Efficient QEMU-Assisted Hybrid ARM Fuzzer
+# HARMFuzz: An Efficient QEMU-Assisted Hybrid ARM Fuzzer made by Alisher Darmenov for Bachelor Thesis
 
 **HARMFuzz** is an ARM-specific hardware fuzzing framework built on top of **AFL++** and **QEMU**.  
 It is designed to uncover vulnerabilities in ARM processors by combining emulated environments with hardware-assisted testing.  
 Unlike traditional fuzzers that focus on software vulnerabilities, HARMFuzz directly addresses challenges unique to ARM hardware, enabling higher code coverage and the discovery of processor-specific bugs.
+![](/git_des/afl_res.png)
+
 
 ---
 
@@ -28,6 +30,8 @@ By systematically addressing these challenges, HARMFuzz advances the state of AR
 ### Hardware
 - A **high-performance host machine** to run AFL++ and QEMU for generating test cases.
 - A **target ARM test device** supporting **KVM** (tested on **Raspberry Pi 4 Model B with Cortex-A72**).
+  
+![](/git_des/large.JPG)
 
 ### Software
 - [QEMU](https://www.qemu.org/) (with ARM support)  
@@ -37,6 +41,8 @@ By systematically addressing these challenges, HARMFuzz advances the state of AR
 ---
 
 ## Installation & Setup
+
+![Hardware Setup](/git_des/setup.png)
 
 1. **Modify AFL++ to support HARMFuzz:
   - Navigate to custom_mutators/aflpp/
@@ -60,6 +66,16 @@ By systematically addressing these challenges, HARMFuzz advances the state of AR
 - +100 additional edges in KVM-enabled scenarios.
 2. Processor-Aware Fuzzing: Able to discover ARM-specific bugs without requiring full internal processor code access.
 3. Practical Validation: Successfully tested on Raspberry Pi 4 Model B (Cortex-A72).
+
+## Comparison between HARMFuzz and AFL++
+![Comparison Graph edges without KVM](/git_des/Comparison_Graph_edges.png)
+
+![Comparison Graph speed without KVM](/git_des/Comparison_Graph_speed.png)
+
+![Graph edges in KVM](/git_des/comparison_plot_edges_kvm.png)
+
+![Graph speed in KVM](/git_des/comparison_plot_speed_kvm.png)
+
 
 ---
 
